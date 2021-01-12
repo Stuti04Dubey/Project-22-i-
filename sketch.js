@@ -36,6 +36,8 @@ function setup() {
 	World.add(world, starBody);
 	
 	Engine.run(engine);
+	console.log(starBody)
+	
 
 }
 
@@ -43,21 +45,28 @@ function setup() {
 function draw() {
   background(bgImg);
 
-  if (keyDown("left_arrow")){
-    fairy.x=fairy.x-2;
-}
-  if (keyDown("right_arrow")){
-      fairy.x=fairy.x+2;
-  }
-if(keyDown("down_arrow")){
-    star.velocityY=2;
-}
-
-
+  
   drawSprites();
 
 }
 
-function keyPressed() {
-	//write code here
+function keyPressed(){
+
+
+	if (keyCode===LEFT_ARROW){
+		fairy.x=fairy.x-10;
+	}
+	if (keyCode===RIGHT_ARROW){
+       fairy.x=fairy.x+10;
+	}
+
+	if (keyCode===DOWN_ARROW){
+		star.velocityY=2;
+	}
+
 }
+
+	
+  
+
+
